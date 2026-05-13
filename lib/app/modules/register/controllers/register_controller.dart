@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:smart_sme_app/app/data/providers/auth_provider.dart';
@@ -90,5 +91,28 @@ class RegisterController extends GetxController {
     emailController.dispose();
     passwordController.dispose();
     super.onClose();
+=======
+import 'package:get/get.dart';
+import 'package:get_storage/get_storage.dart';
+
+class RegisterController extends GetxController {
+  final box = GetStorage();
+
+  var email = ''.obs;
+  var password = ''.obs;
+
+  void register() {
+    if (email.value.isEmpty || password.value.isEmpty) {
+      Get.snackbar("Error", "Semua field wajib diisi");
+      return;
+    }
+
+    // 🔥 simpan ke local storage
+    box.write('email', email.value);
+    box.write('password', password.value);
+
+    Get.snackbar("Success", "Register berhasil");
+    Get.offAllNamed('/login');
+>>>>>>> d333428b5d641271dd99cb762ab0435f4d814709
   }
 }

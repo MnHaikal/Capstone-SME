@@ -1,5 +1,6 @@
 import 'package:get/get.dart';
 
+<<<<<<< HEAD
 import '../modules/dashboard/bindings/dashboard_binding.dart';
 import '../modules/dashboard/views/dashboard_view.dart';
 import '../modules/home/views/home_view.dart';
@@ -29,10 +30,37 @@ class AppPages {
     GetPage(
       name: Routes.SPLASH,
       page: () => SplashView(),
+=======
+// 🔹 SPLASH
+import '../modules/splash/views/splash_view.dart';
+import '../modules/splash/controllers/splash_controller.dart';
+
+// 🔹 LOGIN
+import '../modules/login/views/login_view.dart';
+import '../modules/login/bindings/login_binding.dart';
+
+// 🔹 REGISTER
+import '../modules/register/views/register_view.dart';
+import '../modules/register/controllers/register_controller.dart';
+
+// 🔹 HOME
+import '../modules/home/views/home_view.dart';
+
+class AppPages {
+  static const INITIAL = '/splash';
+
+  static final routes = [
+
+    /// 🔥 SPLASH
+    GetPage(
+      name: '/splash',
+      page: () => const SplashView(),
+>>>>>>> d333428b5d641271dd99cb762ab0435f4d814709
       binding: BindingsBuilder(() {
         Get.put(SplashController());
       }),
     ),
+<<<<<<< HEAD
     GetPage(
       name: Routes.LOGIN,
       page: () => LoginView(),
@@ -71,6 +99,29 @@ class AppPages {
       name: Routes.PROFILE,
       page: () => const ProfileView(),
       binding: ProfileBinding(),
+=======
+
+    /// 🔥 LOGIN
+    GetPage(
+      name: '/login',
+      page: () => const LoginView(),
+      binding: LoginBinding(),
+    ),
+
+    /// 🔥 REGISTER
+    GetPage(
+      name: '/register',
+      page: () => const RegisterView(),
+      binding: BindingsBuilder(() {
+        Get.lazyPut(() => RegisterController());
+      }),
+    ),
+
+    /// 🔥 HOME
+    GetPage(
+      name: '/home',
+      page: () => const HomeView(),
+>>>>>>> d333428b5d641271dd99cb762ab0435f4d814709
     ),
   ];
 }

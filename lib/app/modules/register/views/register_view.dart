@@ -1,9 +1,13 @@
+<<<<<<< HEAD
 import 'package:flutter/gestures.dart';
+=======
+>>>>>>> d333428b5d641271dd99cb762ab0435f4d814709
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../controllers/register_controller.dart';
 
 class RegisterView extends GetView<RegisterController> {
+<<<<<<< HEAD
   const RegisterView({Key? key}) : super(key: key);
 
   @override
@@ -192,6 +196,33 @@ class RegisterView extends GetView<RegisterController> {
           hintStyle: const TextStyle(color: Colors.grey, fontSize: 14),
           border: InputBorder.none,
           contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
+=======
+  const RegisterView({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: const Text("Register")),
+      body: Padding(
+        padding: const EdgeInsets.all(20),
+        child: Column(
+          children: [
+            TextField(
+              onChanged: (val) => controller.email.value = val,
+              decoration: const InputDecoration(labelText: "Email"),
+            ),
+            TextField(
+              onChanged: (val) => controller.password.value = val,
+              decoration: const InputDecoration(labelText: "Password"),
+              obscureText: true,
+            ),
+            const SizedBox(height: 20),
+            ElevatedButton(
+              onPressed: controller.register,
+              child: const Text("Register"),
+            ),
+          ],
+>>>>>>> d333428b5d641271dd99cb762ab0435f4d814709
         ),
       ),
     );

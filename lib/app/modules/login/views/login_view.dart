@@ -49,17 +49,28 @@ class LoginView extends GetView<LoginController> {
 
                   const SizedBox(height: 40),
 
+<<<<<<< HEAD
                   /// EMAIL (HINT DIHAPUS)
                   _buildLabel("Email Address"),
                   _buildTextField(
                     hint: "", // Kosong agar lebih clean
+=======
+                  /// EMAIL
+                  _buildLabel("Email Address"),
+                  _buildTextField(
+                    hint: "owner@nexusinsight.com",
+>>>>>>> d333428b5d641271dd99cb762ab0435f4d814709
                     icon: Icons.alternate_email,
                     onChanged: (val) => controller.email.value = val,
                   ),
 
                   const SizedBox(height: 20),
 
+<<<<<<< HEAD
                   /// PASSWORD (HINT DIHAPUS)
+=======
+                  /// PASSWORD
+>>>>>>> d333428b5d641271dd99cb762ab0435f4d814709
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -75,7 +86,11 @@ class LoginView extends GetView<LoginController> {
                   ),
 
                   Obx(() => _buildTextField(
+<<<<<<< HEAD
                         hint: "", // Kosong agar lebih clean
+=======
+                        hint: "••••••••••••",
+>>>>>>> d333428b5d641271dd99cb762ab0435f4d814709
                         icon: Icons.lock_outline,
                         isPassword: !controller.isPasswordVisible.value,
                         onChanged: (val) =>
@@ -92,7 +107,11 @@ class LoginView extends GetView<LoginController> {
 
                   const SizedBox(height: 30),
 
+<<<<<<< HEAD
                   /// LOGIN BUTTON
+=======
+                  /// 🔥 LOGIN BUTTON WITH LOADING
+>>>>>>> d333428b5d641271dd99cb762ab0435f4d814709
                   Obx(() => SizedBox(
                         width: double.infinity,
                         height: 55,
@@ -139,6 +158,10 @@ class LoginView extends GetView<LoginController> {
 
                   const SizedBox(height: 30),
 
+<<<<<<< HEAD
+=======
+                  /// 🔥 REGISTER LINK (UPDATED)
+>>>>>>> d333428b5d641271dd99cb762ab0435f4d814709
                   Center(
                     child: TextButton(
                       onPressed: () => Get.toNamed('/register'),
@@ -197,8 +220,11 @@ class LoginView extends GetView<LoginController> {
           borderRadius: BorderRadius.circular(8),
           borderSide: BorderSide.none,
         ),
+<<<<<<< HEAD
         // Menambahkan content padding agar teks tidak terlalu menempel ke atas
         contentPadding: const EdgeInsets.symmetric(vertical: 18, horizontal: 15),
+=======
+>>>>>>> d333428b5d641271dd99cb762ab0435f4d814709
       ),
     );
   }
